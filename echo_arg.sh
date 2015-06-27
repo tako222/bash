@@ -17,8 +17,10 @@ do
   if [ `expr $COUNT % 10` -eq 0 ]; then
     echo 
   fi
+  # Shift arguments e.g. [a b c...]->[b.c...]
   shift
   COUNT=`expr $COUNT + 1`
 done
 
+#Last new line
 echo 
