@@ -4,6 +4,12 @@
 
 DIR=/root/work/test/
 
+# Check argument
+if [ ! $1 ]; then
+  echo "Please input argument"
+  exit 1
+fi
+
 #No newline echo
 echo -n "From:" 
 pwd
