@@ -2,12 +2,19 @@
 
 # Echo all arguments
 
-# Set arguments count
+# Global variable
 ARG_COUNT=$#
-if [ $ARG_COUNT -eq 0 ]; then 
-  echo "argument is zero"
-  exit 1
-fi
+
+check()
+{
+  # Check arguments count
+  if [ $ARG_COUNT -eq 0 ]; then
+    echo "argument is zero"
+    exit 1
+  fi
+}
+
+check
 
 # Echo all
 COUNT=1
